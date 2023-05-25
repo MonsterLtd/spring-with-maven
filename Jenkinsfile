@@ -60,11 +60,11 @@ pipeline {
 
         stage('Deploy') {
            steps {
-                // sh 'pkill node'
-                // sh 'npm install -g forever'
-                // sh 'forever start src/index.js'
-                sh 'docker container rm -f mynodejsapp || true'
-                sh 'docker container run -d -p 3000:3000 --name mynodejsapp ${IMAGE_NAME}'
+                sh 'pkill node'
+                sh 'npm install -g forever'
+                sh 'forever start src/index.js'
+                sh 'docker container rm -f springwithmaven || true'
+                sh 'docker container run -d -p 3000:3000 --name springwithmaven ${IMAGE_NAME}'
            }
         }
     }
