@@ -10,7 +10,7 @@ pipeline {
         githubPush()
     }
     environment {
-      DOCKERHUB_CREDENTIALS = credentials('my-docker-hub-credentials')
+      DOCKERHUB_CREDENTIALS = credentials('my-docker-hub-creds')
       IMAGE_NAME = 'nadiad/springwithmaven'
     }
     stages {
